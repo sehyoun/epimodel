@@ -1,0 +1,408 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Technical Documentation &mdash; Compartment Model Helper 0.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/mystyle.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="License" href="license.html" />
+    <link rel="prev" title="SEIR Model" href="tutorial2.html" /> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Compartment Model Helper
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="tutorials.html">Tutorials</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Technical Documentation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#methods">Methods</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#properties">Properties</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="license.html">License</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Compartment Model Helper</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Technical Documentation</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="technical-documentation">
+<h1>Technical Documentation<a class="headerlink" href="#technical-documentation" title="Permalink to this headline">¶</a></h1>
+<p>This is the technical documentation. See <a class="reference internal" href="tutorials.html#tutorial"><span class="std std-ref">Tutorials</span></a> instead to get started.</p>
+<div class="section" id="methods">
+<h2>Methods<a class="headerlink" href="#methods" title="Permalink to this headline">¶</a></h2>
+<dl class="method">
+<dt id="epimodel.epimodel.epimodel">
+<code class="descclassname">epimodel.</code><code class="descname">epimodel</code><span class="sig-paren">(</span><em>struct_linear</em>, <em>struct_interaction</em><span class="sig-paren">)</span><a class="headerlink" href="#epimodel.epimodel.epimodel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Parses struct into matrices</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>struct_linear</strong> (<em>struct</em>) – <p>struct corresponding to linear flows. The syntax is</p>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">struct</span><span class="p">.</span><span class="n">origin</span><span class="p">.</span><span class="n">target</span> <span class="p">=</span> <span class="n">flowrate</span>
+</pre></div>
+</div>
+</li>
+<li><strong>struct_interaction</strong> (<em>struct</em>) – <p>struct corresponding to interacted flows. The syntax is</p>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">struct</span><span class="p">.</span><span class="n">origin</span><span class="p">.</span><span class="n">interaction</span><span class="p">.</span><span class="n">target</span> <span class="p">=</span> <span class="n">flowrate</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Example</p>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="c">% SEIR model</span>
+<span class="n">struct_linear</span><span class="p">.</span><span class="n">exposed</span><span class="p">.</span><span class="n">infectious</span> <span class="p">=</span> <span class="mi">1</span><span class="p">;</span>
+<span class="n">struct_linear</span><span class="p">.</span><span class="n">infectious</span><span class="p">.</span><span class="n">recovered</span> <span class="p">=</span> <span class="mi">1</span><span class="p">;</span>
+<span class="n">struct_interaction</span><span class="p">.</span><span class="n">susceptible</span><span class="p">.</span><span class="n">infectious</span><span class="p">.</span><span class="n">exposed</span> <span class="p">=</span> <span class="mi">1</span><span class="p">;</span>
+<span class="n">seir_model</span> <span class="p">=</span> <span class="n">epimodel</span><span class="p">(</span><span class="n">struct_linear</span><span class="p">,</span> <span class="n">struct_interaction</span><span class="p">);</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="epimodel.epimodel.set_initial_dist">
+<code class="descclassname">epimodel.</code><code class="descname">set_initial_dist</code><span class="sig-paren">(</span><em>struct_dist</em><span class="sig-paren">)</span><a class="headerlink" href="#epimodel.epimodel.set_initial_dist" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets initial distribution</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>struct_dist</strong> (<em>struct</em>) – struct of initial distribution. Unfilled values default to zero</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Example</p>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">struct_dist</span><span class="p">.</span><span class="n">infectious</span> <span class="p">=</span> <span class="mf">1e-4</span><span class="p">;</span>
+<span class="n">struct_dist</span><span class="p">.</span><span class="n">susceptible</span> <span class="p">=</span> <span class="mi">1</span> <span class="o">-</span> <span class="mf">1e-4</span><span class="p">;</span>
+<span class="n">seir_model</span><span class="p">.</span><span class="n">set_initial_dist</span><span class="p">(</span><span class="n">struct_dist</span><span class="p">);</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="epimodel.epimodel.simulate">
+<code class="descclassname">epimodel.</code><code class="descname">simulate</code><span class="sig-paren">(</span><em>end_time</em>, <em>time_step</em><span class="sig-paren">)</span><a class="headerlink" href="#epimodel.epimodel.simulate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Runs simulation/ODE forward</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>end_time</strong> (<em>double</em>) – end time of simulation</li>
+<li><strong>time_step</strong> (<em>double</em>) – [default 1e-3] time step of discretization</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Example</p>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">seir_model</span><span class="p">.</span><span class="n">simulate</span><span class="p">(</span><span class="mi">10</span><span class="p">);</span>
+</pre></div>
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<ul class="last simple">
+<li><a class="reference internal" href="#epimodel.results" title="epimodel.results"><code class="xref mat mat-attr docutils literal notranslate"><span class="pre">results</span></code></a></li>
+<li><a class="reference internal" href="#epimodel.epimodel.set_initial_dist" title="epimodel.epimodel.set_initial_dist"><code class="xref mat mat-attr docutils literal notranslate"><span class="pre">set_initial_dist</span></code></a></li>
+</ul>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Note that The values are computed using an “explicit” udpate, so <cite>time_step</cite> needs to small enough to satisfy the CFL condition.</p>
+</div>
+</dd></dl>
+
+</div>
+<div class="section" id="properties">
+<h2>Properties<a class="headerlink" href="#properties" title="Permalink to this headline">¶</a></h2>
+<dl class="attribute">
+<dt id="epimodel.results">
+<code class="descclassname">epimodel.</code><code class="descname">results</code><a class="headerlink" href="#epimodel.results" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><p class="first">struct</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Description:</th><td class="field-body"><p class="first">Struct of simulation results</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Example:</th><td class="field-body"><div class="first last highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">plot</span><span class="p">(</span><span class="n">model</span><span class="p">.</span><span class="n">results</span><span class="p">.</span><span class="n">time</span><span class="p">,</span> <span class="n">model</span><span class="p">.</span><span class="n">results</span><span class="p">.</span><span class="n">infectious</span><span class="p">);</span>
+</pre></div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="epimodel.init_dist">
+<code class="descclassname">epimodel.</code><code class="descname">init_dist</code><a class="headerlink" href="#epimodel.init_dist" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">double</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Description:</th><td class="field-body">vector of initial distribution</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Note:</th><td class="field-body">Set it using <a class="reference internal" href="#epimodel.epimodel.set_initial_dist" title="epimodel.epimodel.set_initial_dist"><code class="xref mat mat-meth docutils literal notranslate"><span class="pre">set_initial_dist</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="epimodel.name2loc">
+<code class="descclassname">epimodel.</code><code class="descname">name2loc</code><a class="headerlink" href="#epimodel.name2loc" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">struct</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Description:</th><td class="field-body">(INTERNAL ATTRIBUTE) struct of location for different variables</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="epimodel.loc2name">
+<code class="descclassname">epimodel.</code><code class="descname">loc2name</code><a class="headerlink" href="#epimodel.loc2name" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">cell array</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Description:</th><td class="field-body">(INTERNAL ATTRIBUTE) cell array of variable names</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="epimodel.time_knots">
+<code class="descclassname">epimodel.</code><code class="descname">time_knots</code><a class="headerlink" href="#epimodel.time_knots" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">double</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Description:</th><td class="field-body">time knot points of simulation</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="license.html" class="btn btn-neutral float-right" title="License" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="tutorial2.html" class="btn btn-neutral" title="SEIR Model" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, SeHyoun Ahn
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript">
+          var DOCUMENTATION_OPTIONS = {
+              URL_ROOT:'./',
+              VERSION:'0.1',
+              LANGUAGE:'None',
+              COLLAPSE_INDEX:false,
+              FILE_SUFFIX:'.html',
+              HAS_SOURCE:  false,
+              SOURCELINK_SUFFIX: '.txt'
+          };
+      </script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+
+  
+
+  <script type="text/javascript" src="_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
